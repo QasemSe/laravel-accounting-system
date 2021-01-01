@@ -1,6 +1,6 @@
 @extends('dashboard.layouts.app')
 
-@section('title', __('Products __ Create Product'))
+@section('title', __('Products __ Edit Product'))
 
 @section('content')
     <!--begin::Content-->
@@ -11,7 +11,7 @@
                 <!--begin::Info-->
                 <div class="d-flex align-items-center flex-wrap mr-2">
                     <!--begin::Title-->
-                    <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">{{ __('Create Product') }}</h5>
+                    <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">{{ __('Edit Product') }}</h5>
                     <!--end::Title-->
                     <!--begin::Breadcrumb-->
                     <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
@@ -19,7 +19,7 @@
                             <a href="{{ route('dashboard.products.index') }}" class="text-muted">{{ __('Products') }}</a>
                         </li>
                         <li class="breadcrumb-item">
-                            <a class="text-muted">{{ __('Create Product') }}</a>
+                            <a class="text-muted">{{ __('Edit Product') }}</a>
                         </li>
                     </ul>
                     <!--end::Breadcrumb-->
@@ -56,7 +56,7 @@
                                                 <!--end::Svg Icon-->
                                             </span>
                                         </span>
-                                        <h3 class="card-label">{{ __('Create Product') }}</h3>
+                                        <h3 class="card-label">{{ __('Edit Product') }}</h3>
                                         <div id="loading" class="spinner spinner-primary mx-4 d-none"></div>
 
                                     </div>
