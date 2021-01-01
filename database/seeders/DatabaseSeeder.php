@@ -2,11 +2,10 @@
 
 namespace Database\Seeders;
 
+use App\Models\Bill;
 use App\Models\Category;
 use App\Models\Customer;
-use App\Models\Order;
 use App\Models\Product;
-use App\Models\Purchase;
 use App\Models\Seller;
 use Illuminate\Database\Seeder;
 use App\Models\Manager;
@@ -26,6 +25,6 @@ class DatabaseSeeder extends Seeder
         Product::factory(10)->create();
         Seller::factory(10)->create();
         Customer::factory(10)->create();
-        Purchase::factory(10)->create();
+        Bill::factory(10)->create();
     }
 }

@@ -6,11 +6,11 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Laratrust\Traits\LaratrustUserTrait;
+use Laravel\Passport\HasApiTokens;
 
 class Manager extends Authenticatable
 {
-    use LaratrustUserTrait;
-    use HasFactory;
+    use LaratrustUserTrait, HasApiTokens, HasFactory;
 
     protected $fillable = [
         'first_name',

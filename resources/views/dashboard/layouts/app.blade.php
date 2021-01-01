@@ -25,7 +25,7 @@
 <div id="kt_header_mobile" class="header-mobile align-items-center header-mobile-fixed">
     <!--begin::Logo-->
     <a href="{{ route('dashboard.index') }}">
-        <img alt="Logo" src="{{ asset('assets/dashboard/media/logos/logo-light.png') }}" />
+        <img alt="Logo" src="{{ asset('assets/dashboard/media/logos/logo-light.svg') }}" height="15" />
     </a>
     <!--end::Logo-->
     <!--begin::Toolbar-->

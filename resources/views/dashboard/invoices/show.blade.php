@@ -119,7 +119,7 @@
                                     <div class="d-flex flex-column align-items-md-end px-0">
                                         <!--begin::Logo-->
                                         <a href="#" class="mb-5">
-                                            <img src="{{ asset('assets/dashboard/media/logos/logo-dark.png') }}" alt="">
+                                            <img src="{{ asset('assets/dashboard/media/logos/logo-dark.svg') }}" alt="Logo" height="17">
                                         </a>
                                         <!--end::Logo-->
                                     </div>
@@ -128,7 +128,7 @@
                                 <div class="d-flex justify-content-between pt-6">
                                     <div class="d-flex flex-column flex-root">
                                         <span class="font-weight-bolder mb-2">{{ __('Invoice Date') }}</span>
-                                        <span class="opacity-70">{{ \Carbon\Carbon::parse($invoice->invoiced_at)->format('M d, Y') }}</span>
+                                        <span class="opacity-70">{{ \Jenssegers\Date\Date::parse($invoice->invoiced_at)->format('M d, Y') }}</span>
                                     </div>
                                     <div class="d-flex flex-column flex-root">
                                         <span class="font-weight-bolder mb-2 text-uppercase">{{ __('Invoice Number') }}</span>

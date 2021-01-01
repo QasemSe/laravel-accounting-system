@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Purchase extends Model
+class Bill extends Model
 {
     use HasFactory;
 
@@ -15,9 +15,5 @@ class Purchase extends Model
 
     public function seller() {
         return $this->belongsTo(Seller::class);
-    }
-
-    public function getTotalPrice() {
-        return $this->price * $this->quantity;
     }
 }

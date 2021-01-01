@@ -35,7 +35,7 @@ class InvoicesController extends Controller
 
     public function store(StoreInvoiceRequest $request)
     {
-        $product = Product::where('id', $request->product_id)->first(['name', 'sale_price']);
+        $product = Product::where('id', $request->product_id)->first(['name', 'purchase_price']);
 
         Invoice::create([
             'invoice_number' => $this->getNextInvoiceNumber(),
@@ -46,7 +46,7 @@ class InvoicesController extends Controller
             'quantity' => $request->input('quantity'),
             'price' => $request->input('price'),
             'total' => $request->input('price') * $request->input('quantity'),
-            'profit' => ( $request->input('price') - $product->sale_price ) * $request->input('quantity')
+            'profit' => ( $request->input('price') - $product->purchase_price ) * $request->input('quantity')
         ]);
 
         return response()->json([

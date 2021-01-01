@@ -3,36 +3,38 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
+use App\Models\Bill;
 use App\Models\Purchase;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Jenssegers\Date\Date;
 
-class PurchasesController extends Controller
+class BillsController extends Controller
 {
 
     public function index(Request $request)
     {
-        $last_week_date = Carbon::today()->subWeek();
-        $last_month_date = Carbon::today()->subMonth();
-        $last_day_date = Carbon::now()->subDay();
+        $last_week_date = Date::today()->subWeek();
+        $last_month_date = Date::today()->subMonth();
+        $last_day_date = Date::now()->subDay();
 
-        $purchases = Purchase::where('created_at', '>=', $last_week_date)
+        $bills = Bill::where('created_at', '>=', $last_week_date)
             -> orderBy('created_at', 'desc')
             -> paginate(10);
 
         if ($request->sort == 'month') {
-            $purchases = Purchase::where('created_at', '>=', $last_month_date)
+            $bills = Bill::where('created_at', '>=', $last_month_date)
                 -> orderBy('created_at', 'desc')
                 -> paginate(10);
         }
 
         if ($request->sort == 'day') {
-            $purchases = Purchase::where('created_at', '>=', $last_day_date)
+            $bills = Bill::where('created_at', '>=', $last_day_date)
                 -> orderBy('created_at', 'desc')
                 -> paginate(10);
         }
 
-        return view('dashboard.purchases.index', compact('purchases'));
+        return view('dashboard.bills.index', compact('bills'));
     }
 
 
@@ -48,25 +50,25 @@ class PurchasesController extends Controller
     }
 
 
-    public function show(Purchase $purchase)
+    public function show(Bill $bill)
     {
         //
     }
 
 
-    public function edit(Purchase $purchase)
+    public function edit(Bill $bill)
     {
         //
     }
 
 
-    public function update(Request $request, Purchase $purchase)
+    public function update(Request $request, Bill $bill)
     {
         //
     }
 
 
-    public function destroy(Purchase $purchase)
+    public function destroy(Bill $bill)
     {
         //
     }

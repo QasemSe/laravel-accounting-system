@@ -242,7 +242,6 @@
                 $.ajax({
                     url: form.data('action'),
                     method: "POST",
-                    enctype: "multipart/form-data",
                     data: formData,
                     processData: false,
                     contentType: false,

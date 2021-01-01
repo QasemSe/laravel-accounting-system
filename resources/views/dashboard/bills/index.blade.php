@@ -1,5 +1,5 @@
 @extends('dashboard.layouts.app')
-@section('title'){{ __('Categories __ Index') }}@endsection
+@section('title'){{ __('Bills __ Index') }}@endsection
 @section('content')
     <!--begin::Content-->
     <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
@@ -9,7 +9,7 @@
                 <!--begin::Info-->
                 <div class="d-flex align-items-center flex-wrap mr-2">
                     <!--begin::Title-->
-                    <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">{{ __('Purchases') }}</h5>
+                    <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">{{ __('Bills') }}</h5>
                     <!--end::Title-->
                     <!--begin::Breadcrumb-->
                     <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
@@ -17,7 +17,7 @@
                             <a href="{{ route('dashboard.index') }}" class="text-muted">{{ __('Dashboard') }}</a>
                         </li>
                         <li class="breadcrumb-item">
-                            <a class="text-muted">{{ __('Purchases') }}</a>
+                            <a class="text-muted">{{ __('Bills') }}</a>
                         </li>
                     </ul>
                     <!--end::Breadcrumb-->
@@ -35,26 +35,6 @@
 
             <!--begin::Row-->
                 <div class="card card-custom gutter-b">
-                    <div class="card-header flex-wrap border-0 pt-6 pb-0">
-                        <div class="card-title">
-                            <h3 class="card-label">{{ __('Purchases') }}
-                                <span class="d-block text-muted pt-2 font-size-sm">{{ __('All Purchases Deals') }}</span></h3>
-                        </div>
-                        <div class="card-toolbar">
-                            <ul class="nav nav-pills nav-pills-sm nav-dark-75">
-                                <li class="nav-item">
-                                    <a href="{{ route('dashboard.purchases.index', ['sort' => 'month']) }}" class="nav-link py-2 px-4 {{ request()->sort == 'month' ? 'active' : null }}">{{ __('Month') }}</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="{{ route('dashboard.purchases.index') }}" class="nav-link py-2 px-4 {{ request()->sort ? null : 'active' }}">{{ __('Week') }}</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="{{ route('dashboard.purchases.index', ['sort' => 'day']) }}" class="nav-link py-2 px-4 {{ request()->sort == 'day' ? 'active' : null }}">{{ __('Day') }}</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
                     <div class="card-body">
                         <div class="table-responsive">
                             <table class="table table-vertical-center" id="kt_advance_table_widget_2">
@@ -66,7 +46,7 @@
                                             <span></span>
                                         </label>
                                     </th>
-                                    <th style="min-width: 120px">{{ __('Purchase Name') }}</th>
+                                    <th style="min-width: 120px">{{ __('Bill Number') }}</th>
                                     <th style="min-width: 150px">{{ __('Seller Name') }}</th>
                                     <th style="min-width: 150px">{{ __('Product Name') }}</th>
                                     <th style="min-width: 150px">{{ __('Total Price') }}</th>
@@ -74,7 +54,7 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($purchases as $purchase)
+                                @foreach($bills as $bill)
                                     <tr>
                                         <td class="pl-0 py-6">
                                             <label class="checkbox checkbox-lg checkbox-inline">
@@ -83,26 +63,23 @@
                                             </label>
                                         </td>
                                         <td>
-                                            <span class="text-dark-75 font-weight-bolder d-block font-size-lg">{{ $purchase->name }}</span>
-                                            <span class="text-muted font-weight-bold" title="{{ $purchase->created_at }}">
-                                                {{ \Carbon\Carbon::parse($purchase->created_at)->diffForHumans() }}
-                                            </span>
+                                            <span class="text-dark-75 font-weight-bolder d-block font-size-lg">{{ $bill->bill_number }}</span>
                                         </td>
 
                                         <td>
-                                            <span class="text-dark-75 font-weight-bolder d-block font-size-lg">{{ $purchase->seller->name }}</span>
+                                            <span class="text-dark-75 font-weight-bolder d-block font-size-lg">{{ $bill->seller->name }}</span>
                                         </td>
 
                                         <td>
-                                            <span class="text-dark-75 font-weight-bolder d-block font-size-lg">{{ $purchase->product->name }}</span>
+                                            <span class="text-dark-75 font-weight-bolder d-block font-size-lg">{{ $bill->product->name }}</span>
                                         </td>
 
                                         <td>
-                                            <span class="label label-xl label-light-primary label-inline font-weight-bold">{{ $purchase->getTotalPrice() }}</span>
+                                            <span class="label label-xl label-light-primary label-inline font-weight-bold">{{ $bill->amount }}</span>
                                         </td>
 
                                         <td class="pr-0 text-right">
-                                            <a href="{{ route('dashboard.categories.edit', $purchase->id) }}" class="btn btn-icon btn-light btn-hover-primary btn-sm mx-3" title="{{ __('Edit') }}">
+                                            <a href="{{ route('dashboard.purchases.bills.edit', $bill->id) }}" class="btn btn-icon btn-light btn-hover-primary btn-sm mx-3" title="{{ __('Edit') }}">
                                                 <span class="svg-icon svg-icon-md svg-icon-primary">
                                                     <!--begin::Svg Icon-->
                                                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -115,12 +92,12 @@
                                                     <!--end::Svg Icon-->
                                                 </span>
                                             </a>
-                                            <form class="d-inline" action="{{ route('dashboard.purchases.destroy', $purchase->id) }}" method="post">
+                                            <form class="d-inline" action="{{ route('dashboard.purchases.bills.destroy', $bill->id) }}" method="post">
                                                 @csrf
                                                 @method('delete')
 
-                                                <button type="button" data-purchase-name="{{ $purchase->name }}"
-                                                        class="confirm-category-delete btn btn-icon btn-light btn-hover-danger btn-sm" title="{{ __('Delete') }}">
+                                                <button type="button" data-bill-name="{{ $bill->bill_number }}"
+                                                        class="confirm-bill-delete btn btn-icon btn-light btn-hover-danger btn-sm" title="{{ __('Delete') }}">
 
                                                         <span class="svg-icon svg-icon-md svg-icon-danger">
                                                             <!--begin::Svg Icon | path:assets/media/svg/icons/General/Trash.svg-->
@@ -142,7 +119,7 @@
                                 </tbody>
                             </table>
                         </div>
-                        @if(count($purchases) == 0)
+                        @if(count($bills) == 0)
                             <div class="alert alert-custom alert-light-warning fade show mb-10" role="alert">
                                 <div class="alert-icon">
                                     <span class="svg-icon svg-icon-3x svg-icon-warning">
@@ -165,7 +142,7 @@
                 </div>
                 <!--end::Card-->
 
-                {{ $purchases->onEachSide(1)->links() }}
+                {{ $bills->onEachSide(1)->links() }}
             </div>
             <!--end::Container-->
         </div>
@@ -176,10 +153,10 @@
 
 @section('page-scripts')
     <script>
-        $('.confirm-category-delete').click(function () {
+        $('.confirm-bill-delete').click(function () {
 
             var form = $(this).closest('form');
-            var name = $(this).data('purchase-name');
+            var name = $(this).data('bill-name');
 
             Swal.fire({
                 title: '{{ __('Are you sure delete') }} ' + name + '{{ __('?') }}',

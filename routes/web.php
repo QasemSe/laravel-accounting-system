@@ -6,7 +6,7 @@ use App\Http\Controllers\Dashboard\ManagersController;
 use App\Http\Controllers\Dashboard\CategoriesController;
 use App\Http\Controllers\Dashboard\ProductsController;
 use App\Http\Controllers\Dashboard\ProfileController;
-use App\Http\Controllers\Dashboard\PurchasesController;
+use App\Http\Controllers\Dashboard\BillsController;
 use App\Http\Controllers\Dashboard\CustomersController;
 use App\Http\Controllers\Dashboard\InvoicesController;
 
@@ -24,9 +24,6 @@ use App\Http\Controllers\Dashboard\InvoicesController;
 
 Route::redirect('/', '/dashboard');
 
-Route::view('test', 'test');
-Route::post('test', [TestController::class, 'ajax']);
-
 
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
@@ -37,6 +34,7 @@ Route::group(
         Route::prefix('dashboard')->middleware('auth')->name('dashboard.')->group(function () {
             // Index Page
             Route::get('/', [DashboardController::class, 'index'])->name('index');
+            Route::post('/', [DashboardController::class, 'live_data'])->name('index.live');
 
             // Managers Routes
             Route::resource('managers', ManagersController::class);
@@ -45,11 +43,7 @@ Route::group(
             Route::resource('categories', CategoriesController::class);
 
             // Products Routes
-            Route::resource('products', ProductsController::class);
-
-            // Purchase Routes
-            Route::resource('purchases', PurchasesController::class);
-
+            Route::resource('products', ProductsController::class)->except('show');
 
             // Sales Routes
             Route::prefix('sales')->name('sales.')->group(function (){
@@ -58,6 +52,14 @@ Route::group(
                 Route::resource('customers', CustomersController::class);
                 // Invoices page
                 Route::resource('invoices', InvoicesController::class);
+
+            });
+
+            // Purchases Routes
+            Route::prefix('purchases')->name('purchases.')->group(function (){
+
+                // Bills Routes
+                Route::resource('bills', BillsController::class);
 
             });
 
@@ -72,12 +74,15 @@ Route::group(
 
             });
 
-
         });
 
         Auth::routes([
             'register' => false,
             'reset' => false
         ]);
+
+        Route::fallback(function () {
+            abort(404);
+        });
 
 });

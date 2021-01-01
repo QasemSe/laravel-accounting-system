@@ -123,7 +123,7 @@
                                     </th>
                                     <th style="min-width: 120px">{{ __('Product Name') }}</th>
                                     <th style="min-width: 120px">{{ __('Category') }}</th>
-                                    <th style="min-width: 150px">{{ __('Buy Price') }}</th>
+                                    <th style="min-width: 150px">{{ __('Purchase Price') }}</th>
                                     <th style="min-width: 150px">{{ __('Sale Price') }}</th>
                                     <th class="pr-0 text-right" style="min-width: 160px">{{ __('Actions') }}</th>
                                 </tr>
@@ -148,10 +148,10 @@
                                             <span class="text-dark-75 font-weight-bolder d-block font-size-lg">{{ $product->getCategoryName() }}</span>
                                         </td>
                                         <td>
-                                            <span class="label label-lg label-light-primary label-inline font-weight-bold">{{ $product->sale_price }}</span>
+                                            <span class="label label-lg label-light-primary label-inline font-weight-bold">{{ $product->purchase_price }}</span>
                                         </td>
                                         <td>
-                                            <span class="label label-lg label-light-primary label-inline font-weight-bold">{{ $product->purchase_price }}</span>
+                                            <span class="label label-lg label-light-primary label-inline font-weight-bold">{{ $product->sale_price }}</span>
                                         </td>
                                         <td class="pr-0 text-right">
                                             <a href="{{ route('dashboard.products.edit', $product->id) }}" class="btn btn-icon btn-light btn-hover-primary btn-sm mx-3" title="{{ __('Edit') }}">

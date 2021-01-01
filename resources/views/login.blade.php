@@ -13,16 +13,14 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
     <!--end::Fonts-->
 
-
-
     <!--begin::Global Theme Styles(used by all pages)-->
     <link rel="stylesheet" href="{{ asset('assets/dashboard/plugins/global/plugins.bundle.css') }}">
     <!--end::Global Theme Styles-->
 
     @if(app()->getLocale() == 'ar')
-        <link rel="stylesheet" href="{{ asset('assets/dashboard/css/app-rtl.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/dashboard/css/app-rtl.css') }}">
     @else
-        <link rel="stylesheet" href="{{ asset('assets/dashboard/css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/dashboard/css/app.css') }}">
     @endif
 
 </head>
@@ -38,7 +36,7 @@
                 <!--begin::Login Sign in form-->
                 <div class="login-signin">
                     <div class="mb-20">
-                        <h3>{{ env('APP_NAME') }}</h3>
+                        <h3>Accounting</h3>
                         <div class="text-muted font-weight-bold">{{ __('Login') }}</div>
                     </div>
                     @include('dashboard.partials.messages')

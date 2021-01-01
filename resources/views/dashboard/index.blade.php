@@ -25,38 +25,60 @@
                 <!--begin::Dashboard-->
 
                 <div class="row">
-                    <div class="col-lg-6 col-xxl-4">
-                        <!--begin::Stats Widget-->
-                        <a href="#" class="card card-custom bg-primary card-stretch gutter-b">
+                    <div class="col-xl-3">
+                        <!--begin::Stats Widget 29-->
+                        <div class="card card-custom card-stretch gutter-b">
                             <!--begin::Body-->
                             <div class="card-body">
-                                <span class="svg-icon svg-icon-white svg-icon-3x ml-n1">
-                                    <!--begin::Svg Icon | path:assets/media/svg/icons/Media/Equalizer.svg-->
+                                <span class="svg-icon svg-icon-2x svg-icon-primary">
+                                    <!--begin::Svg Icon | path:assets/media/svg/icons/Communication/Mail-opened.svg-->
                                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                                         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                             <rect x="0" y="0" width="24" height="24"></rect>
-                                            <rect fill="#000000" opacity="0.3" x="13" y="4" width="3" height="16" rx="1.5"></rect>
-                                            <rect fill="#000000" x="8" y="9" width="3" height="11" rx="1.5"></rect>
-                                            <rect fill="#000000" x="18" y="11" width="3" height="9" rx="1.5"></rect>
-                                            <rect fill="#000000" x="3" y="13" width="3" height="7" rx="1.5"></rect>
+                                            <path d="M5.84026576,8 L18.1597342,8 C19.1999115,8 20.0664437,8.79732479 20.1528258,9.83390904 L20.8194924,17.833909 C20.9112219,18.9346631 20.0932459,19.901362 18.9924919,19.9930915 C18.9372479,19.9976952 18.8818364,20 18.8264009,20 L5.1735991,20 C4.0690296,20 3.1735991,19.1045695 3.1735991,18 C3.1735991,17.9445645 3.17590391,17.889153 3.18050758,17.833909 L3.84717425,9.83390904 C3.93355627,8.79732479 4.80008849,8 5.84026576,8 Z M10.5,10 C10.2238576,10 10,10.2238576 10,10.5 L10,11.5 C10,11.7761424 10.2238576,12 10.5,12 L13.5,12 C13.7761424,12 14,11.7761424 14,11.5 L14,10.5 C14,10.2238576 13.7761424,10 13.5,10 L10.5,10 Z" fill="#000000"></path>
+                                            <path d="M10,8 L8,8 L8,7 C8,5.34314575 9.34314575,4 11,4 L13,4 C14.6568542,4 16,5.34314575 16,7 L16,8 L14,8 L14,7 C14,6.44771525 13.5522847,6 13,6 L11,6 C10.4477153,6 10,6.44771525 10,7 L10,8 Z" fill="#000000" fill-rule="nonzero" opacity="0.3"></path>
                                         </g>
                                     </svg>
                                     <!--end::Svg Icon-->
                                 </span>
-                                <div class="text-inverse-primary font-weight-bolder font-size-h5 mb-2 mt-5">{{ __('Sales State') }}</div>
-                                <div class="font-weight-bold text-inverse-primary font-size-sm opacity-70">{{ __('Store Sales Analytics') }}</div>
+                                <span id="daily_incomes" class="card-title font-weight-bolder text-dark-75 font-size-h2 mb-0 mt-6 d-block">{{ $daily_incomes }}</span>
+                                <span class="font-weight-bold font-size-sm opacity-60">{{ __('Daily Incomes') }}</span>
                             </div>
                             <!--end::Body-->
-                        </a>
-                        <!--end::Stats Widget-->
+                        </div>
+                        <!--end::Stats Widget 29-->
                     </div>
-                    <div class="col-lg-6 col-xxl-4">
-                        <!--begin::Stats Widget-->
-                        <a href="#" class="card card-custom bg-success card-stretch gutter-b">
+                    <div class="col-xl-3">
+                        <!--begin::Stats Widget 30-->
+                        <div class="card card-custom bg-success card-stretch gutter-b">
                             <!--begin::Body-->
                             <div class="card-body">
-                                <span class="svg-icon svg-icon-white svg-icon-3x ml-n1">
-                                    <!--begin::Svg Icon-->
+                                <span class="svg-icon svg-icon-2x svg-icon-white">
+                                    <!--begin::Svg Icon | path:assets/media/svg/icons/Communication/Group.svg-->
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <rect x="0" y="0" width="24" height="24"/>
+                                            <path d="M2,6 L21,6 C21.5522847,6 22,6.44771525 22,7 L22,17 C22,17.5522847 21.5522847,18 21,18 L2,18 C1.44771525,18 1,17.5522847 1,17 L1,7 C1,6.44771525 1.44771525,6 2,6 Z M11.5,16 C13.709139,16 15.5,14.209139 15.5,12 C15.5,9.790861 13.709139,8 11.5,8 C9.290861,8 7.5,9.790861 7.5,12 C7.5,14.209139 9.290861,16 11.5,16 Z" fill="#000000" opacity="0.3" transform="translate(11.500000, 12.000000) rotate(-345.000000) translate(-11.500000, -12.000000) "/>
+                                            <path d="M2,6 L21,6 C21.5522847,6 22,6.44771525 22,7 L22,17 C22,17.5522847 21.5522847,18 21,18 L2,18 C1.44771525,18 1,17.5522847 1,17 L1,7 C1,6.44771525 1.44771525,6 2,6 Z M11.5,16 C13.709139,16 15.5,14.209139 15.5,12 C15.5,9.790861 13.709139,8 11.5,8 C9.290861,8 7.5,9.790861 7.5,12 C7.5,14.209139 9.290861,16 11.5,16 Z M11.5,14 C12.6045695,14 13.5,13.1045695 13.5,12 C13.5,10.8954305 12.6045695,10 11.5,10 C10.3954305,10 9.5,10.8954305 9.5,12 C9.5,13.1045695 10.3954305,14 11.5,14 Z" fill="#000000"/>
+                                        </g>
+                                    </svg>
+                                    <!--end::Svg Icon-->
+                                </span>
+                                <span id="last_week_profits" class="card-title font-weight-bolder text-white font-size-h2 mb-0 mt-6 d-block">{{ $last_week_profits }}</span>
+                                <span class="font-weight-bold text-white font-size-sm opacity-60">{{ __('Weekly Profits') }}</span>
+                            </div>
+                            <!--end::Body-->
+                        </div>
+                        <!--end::Stats Widget 30-->
+                    </div>
+
+                    <div class="col-xl-3">
+                        <!--begin::Stats Widget 29-->
+                        <div class="card card-custom bg-danger card-stretch gutter-b">
+                            <!--begin::Body-->
+                            <div class="card-body">
+                                <span class="svg-icon svg-icon-2x svg-icon-white">
+                                    <!--begin::Svg Icon | path:assets/media/svg/icons/Communication/Mail-opened.svg-->
                                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                                         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                             <rect x="0" y="0" width="24" height="24"/>
@@ -67,38 +89,39 @@
                                     </svg>
                                     <!--end::Svg Icon-->
                                 </span>
-                                <div class="text-inverse-danger font-weight-bolder font-size-h5 mb-2 mt-5">{{ __('Store Profits') }}</div>
-                                <div class="font-weight-bold text-inverse-danger font-size-sm opacity-70">{{ __('Store Profits Analytics') }}</div>
+                                <span id="weekly_bills" class="card-title font-weight-bolder text-white font-size-h2 mb-0 mt-6 d-block">{{ $weekly_bills }}</span>
+                                <span class="font-weight-bold text-white font-size-sm opacity-60">{{ __('Weekly Expenses') }}</span>
                             </div>
                             <!--end::Body-->
-                        </a>
-                        <!--end::Stats Widget-->
+                        </div>
+                        <!--end::Stats Widget 29-->
                     </div>
-                    <div class="col-lg-6 col-xxl-4">
-                        <!--begin::Stats Widget-->
-                        <a href="{{ route('dashboard.purchases.index') }}" class="card card-custom bg-danger card-stretch gutter-b">
+                    <div class="col-xl-3">
+                        <!--begin::Stats Widget 32-->
+                        <div class="card card-custom bg-dark card-stretch gutter-b">
                             <!--begin::Body-->
                             <div class="card-body">
-                                <span class="svg-icon svg-icon-white svg-icon-3x ml-n1">
-                                    <!--begin::Svg Icon-->
+                                <span class="svg-icon svg-icon-2x svg-icon-white">
+                                    <!--begin::Svg Icon | path:assets/media/svg/icons/Communication/Group-chat.svg-->
                                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                                         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                            <rect x="0" y="0" width="24" height="24"></rect>
-                                            <path d="M5.84026576,8 L18.1597342,8 C19.1999115,8 20.0664437,8.79732479 20.1528258,9.83390904 L20.8194924,17.833909 C20.9112219,18.9346631 20.0932459,19.901362 18.9924919,19.9930915 C18.9372479,19.9976952 18.8818364,20 18.8264009,20 L5.1735991,20 C4.0690296,20 3.1735991,19.1045695 3.1735991,18 C3.1735991,17.9445645 3.17590391,17.889153 3.18050758,17.833909 L3.84717425,9.83390904 C3.93355627,8.79732479 4.80008849,8 5.84026576,8 Z M10.5,10 C10.2238576,10 10,10.2238576 10,10.5 L10,11.5 C10,11.7761424 10.2238576,12 10.5,12 L13.5,12 C13.7761424,12 14,11.7761424 14,11.5 L14,10.5 C14,10.2238576 13.7761424,10 13.5,10 L10.5,10 Z" fill="#000000"></path>
-                                            <path d="M10,8 L8,8 L8,7 C8,5.34314575 9.34314575,4 11,4 L13,4 C14.6568542,4 16,5.34314575 16,7 L16,8 L14,8 L14,7 C14,6.44771525 13.5522847,6 13,6 L11,6 C10.4477153,6 10,6.44771525 10,7 L10,8 Z" fill="#000000" fill-rule="nonzero" opacity="0.3"></path>
+                                            <rect x="0" y="0" width="24" height="24"/>
+                                            <path d="M12,21 C7.581722,21 4,17.418278 4,13 C4,8.581722 7.581722,5 12,5 C16.418278,5 20,8.581722 20,13 C20,17.418278 16.418278,21 12,21 Z" fill="#000000" opacity="0.3"/>
+                                            <path d="M13,5.06189375 C12.6724058,5.02104333 12.3386603,5 12,5 C11.6613397,5 11.3275942,5.02104333 11,5.06189375 L11,4 L10,4 C9.44771525,4 9,3.55228475 9,3 C9,2.44771525 9.44771525,2 10,2 L14,2 C14.5522847,2 15,2.44771525 15,3 C15,3.55228475 14.5522847,4 14,4 L13,4 L13,5.06189375 Z" fill="#000000"/>
+                                            <path d="M16.7099142,6.53272645 L17.5355339,5.70710678 C17.9260582,5.31658249 18.5592232,5.31658249 18.9497475,5.70710678 C19.3402718,6.09763107 19.3402718,6.73079605 18.9497475,7.12132034 L18.1671361,7.90393167 C17.7407802,7.38854954 17.251061,6.92750259 16.7099142,6.53272645 Z" fill="#000000"/>
+                                            <path d="M11.9630156,7.5 L12.0369844,7.5 C12.2982526,7.5 12.5154733,7.70115317 12.5355117,7.96165175 L12.9585886,13.4616518 C12.9797677,13.7369807 12.7737386,13.9773481 12.4984096,13.9985272 C12.4856504,13.9995087 12.4728582,14 12.4600614,14 L11.5399386,14 C11.2637963,14 11.0399386,13.7761424 11.0399386,13.5 C11.0399386,13.4872031 11.0404299,13.4744109 11.0414114,13.4616518 L11.4644883,7.96165175 C11.4845267,7.70115317 11.7017474,7.5 11.9630156,7.5 Z" fill="#000000"/>
                                         </g>
                                     </svg>
                                     <!--end::Svg Icon-->
                                 </span>
-                                <div class="text-inverse-danger font-weight-bolder font-size-h5 mb-2 mt-5">{{ __('Store Purchases') }}</div>
-                                <div class="font-weight-bold text-inverse-danger font-size-sm opacity-70">{{ __('Store Purchases Analytics') }}</div>
+                                <span class="card-title font-weight-bolder text-white font-size-h2 mb-0 mt-6 d-block">35200.00</span>
+                                <span class="font-weight-bold text-white font-size-sm opacity-60">{{ __('Due Invoices') }}</span>
                             </div>
                             <!--end::Body-->
-                        </a>
-                        <!--end::Stats Widget-->
+                        </div>
+                        <!--end::Stats Widget 32-->
                     </div>
                 </div>
-                <!-- /.row -->
 
                 <div class="row">
                     <div class="col-12">
@@ -109,7 +132,7 @@
                                 </div>
                             </div>
                             <div class="card-body">
-                                <div id="chart_1"></div>
+                                <div id="chart_1" dir="ltr"></div>
                             </div>
                         </div>
                     </div>
@@ -136,22 +159,41 @@
 
     const apexChart = "#chart_1";
     var options = {
+
         series: [{
-            name: 'الإيرادات',
-            data: [31, 40, 28, 51, 42, 109, 100, 65, 82, 32, 42, 96]
+            name: '{{ __('Incomes') }}',
+            data: [@foreach( $incomes_data as $month => $data){{ $data }},@endforeach]
         }, {
-            name: 'المدفوعات',
-            data: [11, 32, 45, 32, 34, 52, 41, 12, 84, 51, 82, 15]
+            name: '{{ __('Purchases') }}',
+            data: [@foreach( $purchases_data as $month => $data){{ $data }},@endforeach]
         }, {
-            name: 'الأرباح',
-            data: [10, 50, 69, 23, 91, 216, 51, 32, 81, 89, 74, 14]
+            name: '{{ __('Profits') }}',
+            data: [@foreach( $profits_data as $month => $data){{ $data }},@endforeach]
         }],
         chart: {
             height: 350,
             type: 'line',
             zoom: {
                 enabled: false
-            }
+            },
+            locales: [
+                {
+                    name: "ar",
+                    options: {
+                        "toolbar": {
+                            "exportToSVG": "SVG",
+                            "exportToPNG": "تحميل صورة",
+                            "menu": "القائمة",
+                            "exportToCSV" : "CSV"
+                        }
+                    }
+                },
+                {
+                    name: "en"
+                },
+            ],
+            defaultLocale: '{{ app()->getLocale() }}',
+
         },
         dataLabels: {
             enabled: false
@@ -160,12 +202,13 @@
             curve: 'smooth'
         },
         xaxis: {
-            type: 'datetime',
-            categories: [ "2020-01", "2020-02", "2020-03","2020-04", "2020-05", "2020-06", "2020-07", "2020-08", "2020-09","2020-10", "2020-11", "2020-12"],
+            type: 'category',
+            categories: [@foreach( $formatted_dates as $month => $data)'{{ $data }}',@endforeach],
         },
         tooltip: {
-            x: {
-                format: 'MM/yyyy'
+            style: {
+                fontSize: '11px',
+                fontFamily: "Teshrin AR+LT"
             },
         },
         legend: {
@@ -178,5 +221,30 @@
 
     var chart = new ApexCharts(document.querySelector(apexChart), options);
     chart.render();
+
+</script>
+<script>
+    function live_data() {
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $("meta[name='csrf-token']").attr('content')
+            }
+        });
+
+        $.ajax({
+            url: '{{ route('dashboard.index.live') }}',
+            method: "POST",
+            success: function(response) {
+                $('#daily_incomes').html(response.data.daily_incomes)
+                $('#last_week_profits').html(response.data.last_week_profits)
+                $('#weekly_bills').html(response.data.weekly_bills)
+            },
+            complete: function () {
+                setTimeout(live_data, 5000);
+            }
+        });
+    };
+
+    live_data()
 </script>
 @endsection

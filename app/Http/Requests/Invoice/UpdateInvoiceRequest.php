@@ -2,13 +2,15 @@
 
 namespace App\Http\Requests\Invoice;
 
-use Dotenv\Exception\ValidationException;
-use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreInvoiceRequest extends FormRequest
+class UpdateInvoiceRequest extends FormRequest
 {
-
+    /**
+     * Determine if the user is authorized to make this request.
+     *
+     * @return bool
+     */
     public function authorize()
     {
         return true;
@@ -30,6 +32,4 @@ class StoreInvoiceRequest extends FormRequest
             'due_at' => 'required|date',
         ];
     }
-
-
 }

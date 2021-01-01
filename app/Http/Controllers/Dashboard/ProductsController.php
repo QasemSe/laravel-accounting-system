@@ -48,12 +48,6 @@ class ProductsController extends Controller
     }
 
 
-    public function show(Product $product)
-    {
-        //
-    }
-
-
     public function edit(Product $product)
     {
         $categories = Category::all();
@@ -64,6 +58,7 @@ class ProductsController extends Controller
 
     public function update(UpdateProductRequest $request, Product $product)
     {
+
         $product->update($request->only([
             'name',
             'description',
