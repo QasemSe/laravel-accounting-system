@@ -1,0 +1,71 @@
+@font-face
+{
+    font-family: 'teshrin';
+    font-weight: 100;
+
+    font-display: swap;
+    src: url('webfonts/teshrin_thin.woff2') format('woff2');
+}
+
+@font-face
+{
+    font-family: 'teshrin';
+    font-weight: 200;
+
+    font-display: swap;
+    src: url('webfonts/teshrin_extraLight.woff2') format('woff2');
+}
+
+@font-face
+{
+    font-family: 'teshrin';
+    font-weight: 300;
+
+    font-display: swap;
+    src: url('webfonts/teshrin_light.woff2') format('woff2');
+}
+
+@font-face
+{
+    font-family: 'teshrin';
+    font-weight: 400;
+
+    font-display: swap;
+    src: url('webfonts/teshrin_regular.woff2') format('woff2');
+}
+
+@font-face
+{
+    font-family: 'teshrin';
+    font-weight: 500;
+
+    font-display: swap;
+    src: url('webfonts/teshrin_medium.woff2') format('woff2');
+}
+
+@font-face
+{
+    font-family: 'teshrin';
+    font-weight: 600;
+
+    font-display: swap;
+    src: url('webfonts/teshrin_bold.woff2') format('woff2');
+}
+
+@font-face
+{
+    font-family: 'teshrin';
+    font-weight: 700;
+
+    font-display: swap;
+    src: url('webfonts/teshrin_heavy.woff2') format('woff2');
+}
+
+@font-face
+{
+    font-family: 'teshrin';
+    font-weight: 800;
+
+    font-display: swap;
+    src: url('webfonts/teshrin_black.woff2') format('woff2');
+}

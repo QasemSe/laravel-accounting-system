@@ -269,7 +269,7 @@ section {
 
 body {
   margin: 0;
-  font-family: "Teshrin AR+LT", "sans-serif";
+  font-family: "teshrin", "sans-serif";
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -7189,7 +7189,7 @@ a.close.disabled {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: "Teshrin AR+LT", "sans-serif";
+  font-family: "teshrin", "sans-serif";
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -7314,7 +7314,7 @@ a.close.disabled {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: "Teshrin AR+LT", "sans-serif";
+  font-family: "teshrin", "sans-serif";
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -84758,7 +84758,7 @@ code {
   box-shadow: 0px 0px 50px 0px rgba(82, 63, 105, 0.15);
   border-radius: 0.42rem;
   border: 0;
-  font-family: "Teshrin AR+LT", "sans-serif";
+  font-family: "teshrin", "sans-serif";
   z-index: 98;
 }
 
@@ -87935,7 +87935,7 @@ code {
   padding: 0.5rem 0;
   min-width: 150px;
   font-size: 1rem;
-  font-family: "Teshrin AR+LT", "sans-serif";
+  font-family: "teshrin", "sans-serif";
   background: #ffffff;
   box-shadow: 0px 0px 50px 0px rgba(82, 63, 105, 0.15);
   border: 0;
@@ -88662,7 +88662,7 @@ code {
 }
 
 .ql-toolbar {
-  font-family: "Teshrin AR+LT", "sans-serif";
+  font-family: "teshrin", "sans-serif";
 }
 
 .ql-toolbar.ql-snow {
@@ -90077,7 +90077,7 @@ body.swal2-height-auto {
 }
 
 .uppy .uppy-Root {
-  font-family: "Teshrin AR+LT", "sans-serif";
+  font-family: "teshrin", "sans-serif";
 }
 
 .uppy .uppy-Root.uppy-DragDrop--is-dragdrop-supported {
@@ -90661,7 +90661,7 @@ body.swal2-height-auto {
 .apexcharts-text,
 .apexcharts-title-text,
 .apexcharts-legend-text {
-  font-family: "Teshrin AR+LT", "sans-serif" !important;
+  font-family: "teshrin", "sans-serif" !important;
 }
 
 .apexcharts-title-text {
@@ -90762,7 +90762,7 @@ body.swal2-height-auto {
 }
 
 .leaflet-container .leaflet-popup-content-wrapper .leaflet-popup-content {
-  font-family: "Teshrin AR+LT", "sans-serif";
+  font-family: "teshrin", "sans-serif";
   font-size: 1rem;
 }
 
@@ -90784,7 +90784,7 @@ body {
   padding: 0px;
   font-size: 13px !important;
   font-weight: 400;
-  font-family: "Teshrin AR+LT", "sans-serif";
+  font-family: "teshrin", "sans-serif";
   -ms-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

@@ -18,6 +18,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Vue Single File Component" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -160,25 +161,26 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../accounting" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2020.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\laragon\www\mobile\routes\api" />
-      <recent name="D:\laragon\www\mobile\resources\views\dashboard\products" />
-      <recent name="D:\laragon\www\mobile\resources\views\dashboard\partials" />
-      <recent name="D:\laragon\www\mobile\resources\views" />
-      <recent name="D:\laragon\www\mobile\resources\lang\ar" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\laragon\www\mobile\resources\views\dashboard\invoices" />
       <recent name="D:\laragon\www\mobile\resources\views\dashboard\products" />
       <recent name="D:\laragon\www\mobile\resources\views\dashboard\categories" />
       <recent name="D:\laragon\www\mobile\resources\lang" />
       <recent name="D:\laragon\www\mobile\resources\views\dashboard\managers" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\laragon\www\mobile\public\assets\dashboard\fonts\teshrin\webfonts" />
+      <recent name="D:\laragon\www\mobile\public\assets\dashboard\fonts\teshrin" />
+      <recent name="D:\laragon\www\mobile\routes\api" />
+      <recent name="D:\laragon\www\mobile\resources\views\dashboard\products" />
+      <recent name="D:\laragon\www\mobile\resources\views\dashboard\partials" />
     </key>
   </component>
   <component name="RunManager" selected="npm.dev">
@@ -285,7 +287,9 @@
       <workItem from="1609318738772" duration="40077000" />
       <workItem from="1609412192441" duration="26108000" />
       <workItem from="1609497025835" duration="10083000" />
-      <workItem from="1609530178621" duration="1430000" />
+      <workItem from="1609530178621" duration="2353000" />
+      <workItem from="1609841464550" duration="41000" />
+      <workItem from="1610182034528" duration="2133000" />
     </task>
     <servers />
   </component>
@@ -313,22 +317,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1609440357013" />
-    <state width="1493" height="451" key="GridCell.Tab.0.bottom" timestamp="1608811880750">
+    <state width="1493" height="451" key="GridCell.Tab.0.bottom" timestamp="1610184168463">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="451" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1608811880750" />
-    <state width="1493" height="451" key="GridCell.Tab.0.center" timestamp="1608811880750">
+    <state width="1493" height="451" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1610184168463" />
+    <state width="1493" height="451" key="GridCell.Tab.0.center" timestamp="1610184168463">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="451" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1608811880750" />
-    <state width="1493" height="451" key="GridCell.Tab.0.left" timestamp="1608811880750">
+    <state width="1493" height="451" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1610184168463" />
+    <state width="1493" height="451" key="GridCell.Tab.0.left" timestamp="1610184168463">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="451" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1608811880750" />
-    <state width="1493" height="451" key="GridCell.Tab.0.right" timestamp="1608811880750">
+    <state width="1493" height="451" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1610184168463" />
+    <state width="1493" height="451" key="GridCell.Tab.0.right" timestamp="1610184168463">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="451" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1608811880750" />
+    <state width="1493" height="451" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1610184168463" />
     <state x="604" y="332" key="NewPhpFileDialog" timestamp="1609429130559">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -337,9 +341,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1609024796684" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1609531574459">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1610184097354">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1609531574459" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1610184097354" />
   </component>
 </project>

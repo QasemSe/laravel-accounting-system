@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="{{ asset('assets/dashboard/fonts/teshrin/teshrin.css') }}" >
 <link rel="stylesheet" href="{{ asset('assets/dashboard/plugins/global/plugins.bundle.css') }}">
 
 @if(app()->getLocale() == 'ar')
